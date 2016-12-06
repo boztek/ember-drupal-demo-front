@@ -6,13 +6,4 @@
     About Us
   {{/link-to}}
 </div>
-
-{{#list-filter
-   filter=(action 'filterByCity')
-   as |filteredList|}}
-  <ul>
-    {{#each filteredList as |rentalUnit|}}
-      <li>{{rental-listing rental=rentalUnit}}</li>
-    {{/each}}
-  </ul>
-{{/list-filter}}
+{{{outlet}}}
