@@ -1,5 +1,3 @@
-import DS from 'ember-data';
+import DrupalJSONAPIAdapter from 'ember-data-drupal/adapter';
 
-export default DS.JSONAPIAdapter.extend({
-  namespace: 'api'
-});
+export default DrupalJSONAPIAdapter.extend();

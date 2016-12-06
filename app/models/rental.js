@@ -1,13 +1,17 @@
 import DS from 'ember-data';
 
-const { Model } = DS;
+const {
+  attr,
+  belongsTo,
+  Model,
+} = DS;
 
 export default Model.extend({
-  title: DS.attr(),
-  owner: DS.attr(),
-  city: DS.attr(),
-  type: DS.attr(),
-  image: DS.attr(),
-  bedrooms: DS.attr(),
-  description: DS.attr()
+  title: attr('string'),
+  owner: attr('string'),
+  city: attr('string'),
+  type: belongsTo('rental-type'),
+  image: belongsTo('file'),
+  bedrooms: attr('number'),
+  description: attr('string'),
 });

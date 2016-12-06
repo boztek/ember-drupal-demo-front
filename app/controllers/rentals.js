@@ -10,7 +10,9 @@ export default Controller.extend({
     filterByCity(param) {
       let store = get(this, 'store');
       if (param !== '') {
-        return store.query('rental', { city: param });
+        return store.query('rental', {
+          city: param
+        });
       } else {
         return store.findAll('rental');
       }

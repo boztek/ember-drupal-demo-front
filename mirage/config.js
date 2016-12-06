@@ -4,46 +4,50 @@ export default function() {
   let rentals = [
     {
       type: 'rentals',
-      id: 'grand-old-mansion',
+      id: '17c45e2d-403a-4ef0-8137-045d30d24111',
       attributes: {
         title: 'Grand Old Mansion',
-        owner: 'Veruca Salt',
-        city: 'San Francisco',
+        field_owner: 'Veruca Salt',
+        field_city: 'San Francisco',
         type: 'Estate',
-        bedrooms: 15,
+        field_bedrooms: 15,
         image: 'https://upload.wikimedia.org/wikipedia/commons/c/cb/Crane_estate_(5).jpg',
-        description: "This grand old mansion sits on over 100 acres of rolling hills and dense redwood forests."
+        field_description: "This grand old mansion sits on over 100 acres of rolling hills and dense redwood forests.",
+        slug: 'grand-old-mansion'
       }
     }, {
       type: 'rentals',
-      id: 'urban-living',
+      id: '17c45e2d-403a-4ef0-8137-045d30d24112',
       attributes: {
         title: 'Urban Living',
-        owner: 'Mike Teavee',
-        city: 'Seattle',
+        field_owner: 'Mike Teavee',
+        field_city: 'Seattle',
         type: 'Condo',
-        bedrooms: 1,
+        field_bedrooms: 1,
         image: 'https://upload.wikimedia.org/wikipedia/commons/0/0e/Alfonso_13_Highrise_Tegucigalpa.jpg',
-        description: "A commuters dream. This rental is within walking distance of 2 bus stops and the Metro."
+        field_description: "A commuters dream. This rental is within walking distance of 2 bus stops and the Metro.",
+        slug: 'urban-living'
       }
     }, {
       type: 'rentals',
-      id: 'downtown-charm',
+      id: '17c45e2d-403a-4ef0-8137-045d30d24113',
       attributes: {
         title: 'Downtown Charm',
-        owner: 'Violet Beauregarde',
-        city: 'Portland',
+        field_owner: 'Violet Beauregarde',
+        field_city: 'Portland',
         type: 'Apartment',
-        bedrooms: 3,
+        field_bedrooms: 3,
         image: 'https://upload.wikimedia.org/wikipedia/commons/f/f7/Wheeldon_Apartment_Building_-_Portland_Oregon.jpg',
-        description: "Convenience is at your doorstep with this charming downtown rental. Great restaurants and active night life are within a few feet."
+        field_description: "Convenience is at your doorstep with this charming downtown rental. Great restaurants and active night life are within a few feet.",
+        slug: 'downtown-charm'
       }
   }];
 
-  this.get('/rentals', function(db, request) {
-    if(request.queryParams.city !== undefined) {
+  this.get('/node/rental', function(db, request) {
+    if(request.queryParams["filter[field_city][value]"] !== undefined) {
       let filteredRentals = rentals.filter(function(i) {
-        return i.attributes.city.toLowerCase().indexOf(request.queryParams.city.toLowerCase()) !== -1;
+        let city = request.queryParams["filter[field_city][value]"].toLowerCase();
+        return i.attributes.field_city.toLowerCase().indexOf(city) !== -1;
       });
       return { data: filteredRentals };
     } else {
@@ -52,7 +56,7 @@ export default function() {
   });
 
   // Find and return the provided rental from our rental list above
-  this.get('/rentals/:id', function (db, request) {
+  this.get('/node/rental/:id', function (db, request) {
     return { data: rentals.find((rental) => request.params.id === rental.id) };
   });
 }

@@ -21,7 +21,9 @@ export default Component.extend({
       let filterInputValue = get(this, 'value'),
           filterAction = get(this, 'filter');
 
-      filterAction(filterInputValue).then((filterResults) => set(this, 'results', filterResults));
+      filterAction(filterInputValue).then((filterResults) => {
+        set(this, 'results', filterResults);
+      });
     }
   }
 });

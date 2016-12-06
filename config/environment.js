@@ -20,6 +20,12 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
+    },
+
+    drupalEntityModels: {
+      "rental": { fields: ['owner', 'city', 'bedrooms', 'description', 'image', 'type'] },
+      "file": { entity: 'file', bundle: 'file' },
+      "rental-type": { entity: 'taxonomy_term', bundle: 'rental_type' },
     }
   };
 
