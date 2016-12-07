@@ -11,7 +11,6 @@ export default function() {
         field_city: 'San Francisco',
         field_bedrooms: 15,
         field_description: "This grand old mansion sits on over 100 acres of rolling hills and dense redwood forests.",
-        slug: 'grand-old-mansion'
       },
       relationships: {
         field_image: {
@@ -34,10 +33,8 @@ export default function() {
         title: 'Urban Living',
         field_owner: 'Mike Teavee',
         field_city: 'Seattle',
-        type: 'Condo',
         field_bedrooms: 1,
         field_description: "A commuters dream. This rental is within walking distance of 2 bus stops and the Metro.",
-        slug: 'urban-living'
       },
       relationships: {
         field_image: {
@@ -60,10 +57,8 @@ export default function() {
         title: 'Downtown Charm',
         field_owner: 'Violet Beauregarde',
         field_city: 'Portland',
-        type: 'Apartment',
         field_bedrooms: 3,
         field_description: "Convenience is at your doorstep with this charming downtown rental. Great restaurants and active night life are within a few feet.",
-        slug: 'downtown-charm'
       },
       relationships: {
         field_image: {
