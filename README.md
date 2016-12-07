@@ -1,7 +1,27 @@
 # frontend-app
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+## Running the app
+
+1. Checkout code
+
+    git clone https://github.com/boztek/ember-drupal-demo-front.git
+
+2. Download dependencies:
+
+    cd ember-drupal-demo-front
+    npm install
+    bower install
+    curl -o vendor/gmaps.js https://maps.googleapis.com/maps/api/js\?v\=3.22
+
+3. Run the dev server
+
+    ember s
+
+### Same application before Drupal chosen as data source
+
+See the tag before-drupal (https://github.com/boztek/ember-drupal-demo-front/releases/tag/before-drupal).
+
+Compare the differences in the payload fixture in mirage/config.js and the reflected data model in the models.
 
 ## Prerequisites
 
@@ -11,42 +31,3 @@ You will need the following things properly installed on your computer.
 * [Node.js](https://nodejs.org/) (with NPM)
 * [Bower](https://bower.io/)
 * [Ember CLI](https://ember-cli.com/)
-* [PhantomJS](http://phantomjs.org/)
-
-## Installation
-
-* `git clone <repository-url>` this repository
-* `cd frontend-app`
-* `npm install`
-* `bower install`
-
-## Running / Development
-
-* `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
-
-### Code Generators
-
-Make use of the many generators for code, try `ember help generate` for more details
-
-### Running Tests
-
-* `ember test`
-* `ember test --server`
-
-### Building
-
-* `ember build` (development)
-* `ember build --environment production` (production)
-
-### Deploying
-
-Specify what it takes to deploy your app.
-
-## Further Reading / Useful Links
-
-* [ember.js](http://emberjs.com/)
-* [ember-cli](https://ember-cli.com/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
