@@ -2,13 +2,13 @@
 
 ## Running the app
 
-1. Checkout code
+Checkout code
 
 ```
 git clone https://github.com/boztek/ember-drupal-demo-front.git
 ```
 
-2. Download dependencies:
+Download dependencies:
 
 ```
 cd ember-drupal-demo-front
@@ -17,7 +17,7 @@ bower install
 curl -o vendor/gmaps.js https://maps.googleapis.com/maps/api/js\?v\=3.22
 ```
 
-3. Run the dev server
+Run the dev server
 
 ```
 ember s
