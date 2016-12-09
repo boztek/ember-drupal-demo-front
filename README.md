@@ -23,6 +23,14 @@ Run the dev server
 ember s
 ```
 
+To run the app with a real Drupal backend, proxy the API calls. For example if running a Drupal CMS locally at ```http://127.0.0.1:8088``` then run
+
+```
+ember s --proxy http://127.0.0.1:8088
+```
+
+instead.
+
 ### Same application before Drupal chosen as data source
 
 See the tag before-drupal (https://github.com/boztek/ember-drupal-demo-front/releases/tag/before-drupal).
