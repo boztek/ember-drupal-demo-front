@@ -14,4 +14,5 @@ export default Model.extend({
   image: belongsTo('file'),
   bedrooms: attr('number'),
   description: attr('string'),
+  testField: attr('string')
 });
