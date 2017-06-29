@@ -1,5 +1,5 @@
 export default function() {
-  this.namespace = '/api';
+  this.namespace = '/jsonapi';
 
   let rentals = [
     {
