@@ -23,9 +23,10 @@ module.exports = function(environment) {
     },
 
     drupalEntityModels: {
-      "rental": { fields: ['owner', 'city', 'bedrooms', 'description', 'image', 'type'] },
+      "rental": { fields: ['owner', 'city', 'bedrooms', 'description', 'image', 'type', 'testField'] },
       "file": { entity: 'file', bundle: 'file' },
       "rental-type": { entity: 'taxonomy_term', bundle: 'rental_type' },
+      "blog-post": { bundle: 'blog_post', fields: ['blogContent', 'testField'] },
     }
   };
 
